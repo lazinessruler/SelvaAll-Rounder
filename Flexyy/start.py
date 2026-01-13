@@ -1,61 +1,38 @@
-
 from pyrogram import Client, filters
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 
-# ========= IMAGES =========
-START_PHOTO = "https://files.catbox.moe/mkuv1d.jpg"
-HELP_PHOTO = "https://files.catbox.moe/k9et29.jpg"
+from config import OWNER_ID
 
-# ========= BUTTONS =========
-start_buttons = InlineKeyboardMarkup(
-    [
-        [
-            InlineKeyboardButton("📢 Support Channel", url="https://t.me/ScriptFlix_Bots"),
-            InlineKeyboardButton("💬 Support GC", url="https://t.me/+mdTWp_9iEo8yMWQ0")
-        ],
-        [
-            InlineKeyboardButton("❓ Help & Commands", callback_data="help_page")
-        ]
-    ]
-)
 
-help_buttons = InlineKeyboardMarkup(
-    [
-        [
-            InlineKeyboardButton("🔙 Back", callback_data="back_start")
-        ]
-    ]
-)
+def filter(cmd: str):
+    return filters.private & filters.incoming & filters.command(cmd)
 
-# ========= /start =========
-@Client.on_message(filters.command("start"))
-async def start_cmd(client, message):
-    await message.reply_photo(
-        photo=START_PHOTO,
-        caption="**🚀 Coming Soon!**",
-        reply_markup=start_buttons
+@Client.on_message(filter("start"))
+async def start(bot: Client, msg: Message):
+    me2 = (await bot.get_me()).mention
+    await bot.send_photo(
+        chat_id=msg.chat.id,
+        photo="https://files.catbox.moe/bmu0bv.jpg",
+        caption=f"""✦ » ʜᴇʏ  {msg.from_user.mention}  ✤,
+✦ » ɪ ᴀᴍ {me2},
+
+✦ » Aɴ ᴏᴘᴇɴ sᴏᴜʀᴄᴇ sᴛʀɪɴɢ sᴇssɪᴏɴ ɢᴇɴᴇʀᴀᴛᴏʀ ʙᴏᴛ, ᴡʀɪᴛᴛᴇɴ ɪɴ ᴩʏᴛʜᴏɴ ᴡɪᴛʜ ᴛʜᴇ ʜᴇʟᴩ ᴏғ ᴩʏʀᴏɢʀᴀᴍ.
+
+✦ » ᴘʟᴇᴀꜱᴇ ᴄʜᴏᴏꜱᴇ ᴛʜᴇ ᴘʏᴛʜᴏɴ ʟɪʙʀᴀʀʏ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ɢᴇɴᴇʀᴀᴛᴇ ꜱᴛʀɪɴɢ ꜱᴇꜱꜱɪᴏɴ ꜰᴏʀ.
+
+✦ » ɪғ ʏᴏᴜ ɴᴇᴇᴅ ᴀɴʏ ʜᴇʟᴘ, ᴛʜᴇɴ ᴅᴍ ᴛᴏ ᴍʏ ᴏᴡɴᴇʀ: [ᯏ 𝚬 ꧊᱂ 𝛆 ⲛ !! ‹𝟹](tg://user?id={OWNER_ID}) !""",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(text="˹ ɢᴇɴᴇʀᴀᴛᴇ sᴛʀɪɴɢ ˼", callback_data="generate")
+                ],
+                [
+                    InlineKeyboardButton("˹ sᴜᴘᴘᴏʀᴛ ˼", url="https://t.me/+i9uUE0jq6tA0YWM1"),
+                    InlineKeyboardButton("˹ ᴜᴘᴅᴀᴛᴇs ˼", url="https://t.me/ScriptFlix_Bots")
+                ],
+                [
+                    InlineKeyboardButton("˹ ᴍᴜsɪᴄ ʙᴏᴛ ˼", url="https://t.me/SoundFreqBot")
+                ]                
+            ]
+        )
     )
-
-# ========= HELP PAGE =========
-@Client.on_callback_query(filters.regex("help_page"))
-async def help_page(client, callback):
-    await callback.message.edit_media(
-        media=HELP_PHOTO,
-        reply_markup=help_buttons
-    )
-    await callback.message.edit_caption(
-        caption=""  # empty msg for clean UI
-    )
-    await callback.answer()
-
-# ========= BACK TO START =========
-@Client.on_callback_query(filters.regex("back_start"))
-async def back_start(client, callback):
-    await callback.message.edit_media(
-        media=START_PHOTO,
-        reply_markup=start_buttons
-    )
-    await callback.message.edit_caption(
-        caption="**🚀 Coming Soon!**"
-    )
-    await callback.answer()
