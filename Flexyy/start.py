@@ -15,17 +15,10 @@ async def start(bot: Client, msg: Message):
         photo="https://files.catbox.moe/bmu0bv.jpg",
         caption=f"""✦ » ʜᴇʏ  {msg.from_user.mention}  ✤,
 ✦ » ɪ ᴀᴍ {me2},
-
-✦ » Aɴ ᴏᴘᴇɴ sᴏᴜʀᴄᴇ sᴛʀɪɴɢ sᴇssɪᴏɴ ɢᴇɴᴇʀᴀᴛᴏʀ ʙᴏᴛ, ᴡʀɪᴛᴛᴇɴ ɪɴ ᴩʏᴛʜᴏɴ ᴡɪᴛʜ ᴛʜᴇ ʜᴇʟᴩ ᴏғ ᴩʏʀᴏɢʀᴀᴍ.
-
-✦ » ᴘʟᴇᴀꜱᴇ ᴄʜᴏᴏꜱᴇ ᴛʜᴇ ᴘʏᴛʜᴏɴ ʟɪʙʀᴀʀʏ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ɢᴇɴᴇʀᴀᴛᴇ ꜱᴛʀɪɴɢ ꜱᴇꜱꜱɪᴏɴ ꜰᴏʀ.
-
+✦ » 𝘔𝘦𝘳𝘢 𝘔𝘢𝘯𝘯 𝘕𝘢𝘩𝘪 𝘏𝘢𝘪 𝘞𝘦𝘭𝘤𝘰𝘮𝘦 𝘔𝘴𝘨 𝘓𝘪𝘬𝘩𝘯𝘦 𝘒𝘢 𝘐𝘴 𝘓𝘪𝘺𝘦 𝘕𝘢𝘩𝘪 𝘓𝘪𝘩𝘬 𝘙𝘢𝘩𝘢 𝘎𝘢𝘯𝘥 𝘔𝘢𝘳𝘢𝘰 𝘉𝘩𝘢𝘪 !!
 ✦ » ɪғ ʏᴏᴜ ɴᴇᴇᴅ ᴀɴʏ ʜᴇʟᴘ, ᴛʜᴇɴ ᴅᴍ ᴛᴏ ᴍʏ ᴏᴡɴᴇʀ: [ᯏ 𝚬 ꧊᱂ 𝛆 ⲛ !! ‹𝟹](tg://user?id={OWNER_ID}) !""",
         reply_markup=InlineKeyboardMarkup(
             [
-                [
-                    InlineKeyboardButton(text="˹ ɢᴇɴᴇʀᴀᴛᴇ sᴛʀɪɴɢ ˼", callback_data="generate")
-                ],
                 [
                     InlineKeyboardButton("˹ sᴜᴘᴘᴏʀᴛ ˼", url="https://t.me/+i9uUE0jq6tA0YWM1"),
                     InlineKeyboardButton("˹ ᴜᴘᴅᴀᴛᴇs ˼", url="https://t.me/ScriptFlix_Bots")
