@@ -1,70 +1,46 @@
-# ================= CORE TELEGRAM LIBS =================
 pyrogram
 tgcrypto==1.2.5
 pyromod==1.5
 pyrofork
 telethon==1.26.1
 requests
-
-# ================= ASYNC & UTILS =================
 aiohttp
 aiofiles
 asyncio
-requests
 httpx
 python-dotenv==0.21.0
 pytz
 python-dateutil
-
-# ================= DATABASE SUPPORT =================
 pymongo==4.6.0
 dnspython==2.2.1
 motor==3.1.1
 redis
 aiosqlite
 sqlalchemy
-
-# ================= FILE / MEDIA =================
 pillow
 hachoir
 ffmpeg-python
 opencv-python-headless
 numpy
-
-# ================= SECURITY / CRYPTO =================
 cryptography
 bcrypt
 passlib
-
-# ================= LOGGING / DEBUG =================
 loguru
 colorlog
-
-# ================= TEXT / PARSING =================
 regex
 emoji
 beautifulsoup4
 lxml
 html5lib
-
-# ================= TELEGRAM FEATURES =================
 telegraph
 pyshorteners
-
-# ================= SCHEDULING / TASKS =================
 apscheduler
 schedule
-
-# ================= HEROKU / DEPLOY =================
 gunicorn
 psutil==5.9.4
-
-# ================= JSON / YAML =================
 ujson
 orjson
 pyyaml
-
-# ================= GIT / MISC =================
 GitPython==3.1.40
 humanize
 validators
