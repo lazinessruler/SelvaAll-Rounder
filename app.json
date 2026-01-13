@@ -21,7 +21,7 @@
         }, 
         "MONGO_URL": {
             "description": "mongo db url here",
-            "value": "",
+            "value": "mongodb+srv://lazinessruler:HeuAI7arR021d6lX@stringsession.8gplxbo.mongodb.net/StringSession?retryWrites=true&w=majority",
             "required": true
         },
         "API_ID": {
