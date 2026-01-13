@@ -1,0 +1,41 @@
+{
+  "name": "Secret Bot",
+  "description": "A Telegram bot",
+  "repository": "https://github.com/yourusername/whisper-bot",
+  "logo": "https://telegra.ph/file/5e7b5c5e3b5c5e3b5c5e3.png",
+  "keywords": [
+    "telegram",
+    "bot",
+    "whisper",
+    "secret",
+    "anonymous",
+    "python"
+  ],
+  "env": {
+    "TOKEN": {
+      "description": "Your bot token from @BotFather",
+      "required": true
+    },
+    "API_ID": {
+      "description": "Your API ID from my.telegram.org",
+      "required": true,
+      "value": "24168862"
+    },
+    "API_HASH": {
+      "description": "Your API Hash from my.telegram.org",
+      "required": true,
+      "value": "916a9424dd1e58ab7955001ccc0172b3"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "eco"
+    }
+  }
+}
