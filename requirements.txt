@@ -4,6 +4,7 @@ tgcrypto==1.2.5
 pyromod==1.5
 pyrofork
 telethon==1.26.1
+requests
 
 # ================= ASYNC & UTILS =================
 aiohttp
