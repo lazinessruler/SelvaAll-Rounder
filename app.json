@@ -1,40 +1,48 @@
 {
-  "name": "Flexyy Pyrogram Bot",
-  "description": "A lightweight Pyrogram Telegram Bot with Flexyy plugin system (Eco Plan Ready)",
-  "repository": "https://github.com/yourusername/flexyy-bot",
-  "keywords": ["telegram", "pyrogram", "bot", "eco", "flexyy"],
-  "stack": "heroku-22",
-
-  "env": {
-    "API_ID": {
-      "description": "Telegram API ID (replace demo value)",
-      "value": "24168862",
-      "required": true
+  "name": "Flexyy Bot !!",
+  "description": "A Telegram Bot to generate Telethon and Pyrogram String Sessions.",
+  "logo": "https://telegra.ph/file/c53d9a7df9dbaa5f4db05.jpg",
+  "keywords": [
+    "telegram",
+    "bot",
+    "python",
+    "pyrogram"
+  ],
+    "env": {
+        "BOT_TOKEN": {
+            "description": "Get this value from @BotFather",
+             "value": "",
+            "required": true
+        },  
+        "MUST_JOIN": {
+            "description": "Username of a group or channel for which you want to set force sub.(without @)",
+            "value": "ScriptFlix_Bots",
+            "required": true      
+        }, 
+        "MONGO_URL": {
+            "description": "mongo db url here",
+            "value": "",
+            "required": true
+        },
+        "API_ID": {
+            "description": "telegram api id here",
+            "value": "21803165",
+            "required": true
+        },
+        "OWNER_ID": {
+            "description": "Telegram id of the person who will known as owner of the bot.",
+            "value": "8561360797",
+            "required": true
+        }, 
+        "API_HASH": {
+            "description": "telegram api hash here",
+            "value": "05e5e695feb30e25bef47484cc006da7",
+            "required": true
+        }
     },
-    "API_HASH": {
-      "description": "Telegram API HASH (replace demo value)",
-      "value": "916a9424dd1e58ab7955001ccc0172b3",
-      "required": true
-    },
-    "BOT_TOKEN": {
-      "description": "Telegram Bot Token (replace demo value)",
-      "value": "",
-      "required": true
-    }
-  },
-
-  "formation": {
-    "worker": {
-      "quantity": 1,
-      "size": "eco"
-    }
-  },
-
-  "addons": [],
-
-  "buildpacks": [
-    {
-      "url": "heroku/python"
-    }
-  ]
+    "addons": [
+        {
+            "plan": "heroku-postgresql"
+        }
+    ]
 }

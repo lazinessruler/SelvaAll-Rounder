@@ -5,7 +5,7 @@ from pyrogram import Client, idle
 from pyromod import listen  
 from pyrogram.errors import ApiIdInvalid, ApiIdPublishedFlood, AccessTokenInvalid
 
-
+# Configure logging
 logging.basicConfig(
     level=logging.INFO, 
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
@@ -13,10 +13,10 @@ logging.basicConfig(
 
 logging.getLogger("pymongo").setLevel(logging.ERROR)
 
-
+# Initialize start time
 StartTime = time.time()
 
-
+# Initialize the Client
 app = Client(
     "Anonymous",
     api_id=config.API_ID,
@@ -27,7 +27,7 @@ app = Client(
 )
 
 if __name__ == "__main__":
-    print("𝐹𝑙𝑒𝑥𝑦𝑦")
+    print("𝐹𝑙𝑒𝑥𝑦𝑦 𝑆𝑡𝑟𝑖𝑛𝑔 𝑆𝑒𝑠𝑠𝑖𝑜𝑛 𝐺𝑒𝑛.. 𝑠𝑡𝑎𝑟𝑡𝑖𝑛𝑔...")
     try:
         app.start()
     except ApiIdInvalid:
@@ -41,9 +41,9 @@ if __name__ == "__main__":
         raise
 
     uname = app.get_me().username
-    print(f"@{uname} NOW FLEXYY SESSION GEN IS READY TO GEN SESSION")
+    print(f"@{uname} NOW ALPHA SESSION GEN IS READY TO GEN SESSION")
     
     idle()
     
     app.stop()
-    print("𝐒𝐞𝐬𝐬𝐢𝐨𝐧 𝐒𝐭𝐨𝐩𝐩...")
+    print("𝐒𝐞𝐬𝐬𝐢𝐨𝐧 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐢𝐧𝐠 𝐒𝐭𝐨𝐩𝐩...")
